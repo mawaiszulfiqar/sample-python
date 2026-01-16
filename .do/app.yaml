@@ -1,6 +1,16 @@
+databases:
+- cluster_name: db-valkey-nyc1-33226
+  engine: VALKEY
+  name: db-valkey-nyc1-33226
+  production: true
+  version: "8"
 name: sample-python
 services:
 - environment_slug: python
+  envs:
+  - key: DATABASE_URL
+    scope: RUN_TIME
+    value: ${db-valkey-nyc1-33226.DATABASE_URL}
   github:
     branch: main
     repo: mawaiszulfiqar/sample-python
