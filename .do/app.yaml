@@ -3,6 +3,5 @@ services:
 - environment_slug: python
   github:
     branch: main
-    deploy_on_push: true
-    repo: digitalocean/sample-python
+    repo: mawaiszulfiqar/sample-python
   name: sample-python
